@@ -4,7 +4,7 @@
   "description": "photobox test exercise",
   "scripts": {
     "setup": "npm cache clean && rm -rf node_modules && npm install",
-    "test": "./node_modules/.bin/cucumber.js --format pretty --compiler=js:babel-register --require=features/support --require=features/step-definitions --require=features/reports"
+    "test": "./node_modules/.bin/cucumber.js --format pretty --compiler=js:babel-register --require=features/support --require=features/step-definitions"
   },
   "author": "Segun",
   "license": "ISC",
