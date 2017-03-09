@@ -1,13 +1,9 @@
-import { driver, browser } from './driver';
 import { defineSupportCode } from 'cucumber';
 import http from 'request-promise';
 const _ = require('lodash');
 const env = require('./env.js')
 
 function World() {
-
-        //this.driver = driver;
-        //this.browser = browser;
         const self = this;
         this.httpGet = function (uri) {
             return _httpRequest({ method: 'GET', uri: uri, headers: {'User-Agent': 'node.js'}})
@@ -50,16 +46,6 @@ function World() {
                 self.statusCode = response.statusCode;
             });
         }
-
-
-        this.uri = function(path) {
-          return env.BASE_URL_GITHUB_API_USERS + path
-        }
-
-
-
-
-
 
 }
 
