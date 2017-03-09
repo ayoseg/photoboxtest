@@ -19,7 +19,7 @@ Follow the steps below to run the test suite
 
 ## Installation steps
 ``` bash
-  $ git clone https://github.com/segunake/photoboxtest.git
+  $ git clone https://github.com/ayoseg/photoboxtest.git
   $ cd photoboxtest
   $ npm run setup
   $ npm test
