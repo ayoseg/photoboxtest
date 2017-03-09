@@ -20,7 +20,6 @@ function World() {
         function _httpRequest(options){
             if(env.github_api_url){
                 options.uri = env.github_api_url + options.uri;
-                console.log(options.uri);
             }
 
             return http({
@@ -45,7 +44,6 @@ function World() {
                 }
 
                 const bodyString = response.message.slice(6);
-                console.log(bodyString);
                 const body = JSON.parse(bodyString);
 
                 self.actualResponse = body;

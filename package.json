@@ -2,6 +2,10 @@
   "name": "photoboxtest",
   "version": "1.0.0",
   "description": "photobox test exercise",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayoseg/photoboxtest.git"
+  },
   "scripts": {
     "setup": "npm cache clean && rm -rf node_modules && npm install",
     "test": "./node_modules/.bin/cucumber.js --format pretty --compiler=js:babel-register --require=features/support --require=features/step-definitions"
