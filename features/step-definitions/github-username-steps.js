@@ -58,18 +58,4 @@ defineSupportCode(function({Given, When, Then}) {
                console.log("Invalid Entry, please enter yes or no for availability");
          }
        });
-
-
-       function checkProperty (lastResponse, key, value, callback) {
-                     var actual = checkPropertyExists(lastResponse, key, value, callback)
-                     if (!actual) { return false }
-                     if (actual!== Value) {
-                       callback.fail('The last response did not have the expected content in ' +
-                         'property ' + key + '. ' + 'Got:\n\n' + actual + '\n\nExpected:\n\n' +
-                         value)
-                       return false
-                     }
-                     return true
-                   }
-
 });
