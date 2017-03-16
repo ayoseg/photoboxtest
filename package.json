@@ -8,7 +8,7 @@
   },
   "scripts": {
     "setup": "npm cache clean && rm -rf node_modules && npm install",
-    "test": "./node_modules/.bin/cucumber.js --format pretty --compiler=js:babel-register --require=features/support --require=features/step-definitions"
+    "test": "./node_modules/.bin/cucumber.js --format pretty --format json:features/reports/cucumber_report.json --compiler js:babel-register --require features/support --require features/step-definitions"
   },
   "author": "Segun",
   "license": "ISC",
@@ -24,11 +24,14 @@
     "chai-as-promised": "^6.0.0",
     "chromedriver": "^2.25.1",
     "cucumber": "^2.0.0-rc.7",
-    "cucumber-html-reporter": "^0.3.7",
+    "cucumber-html-reporter": "^0.2.10",
+    "fs": "0.0.1-security",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
+    "path": "^0.12.7",
     "request-promise": "^3.0.0",
+    "sanitize-filename": "^1.6.1",
     "selenium-webdriver": "^3.1.0",
     "webpack": "^2.2.1"
   }

@@ -4,13 +4,14 @@ Feature: Verify username
   In order to check that my username exist
   I want to verify my username
 
-
+  @api
   Scenario: API returns correct full name 
     Given a github username photobox
     When I make a GET request to "/users/photobox" 
     Then I should get response statusCode 200
     Then the response property "name" should be "photobox"
 
+  @ui
   Scenario Outline: UI shows correct availability of a username
     Given I am on Github homepage
     When I choose "Sign up"

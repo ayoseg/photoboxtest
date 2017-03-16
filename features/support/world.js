@@ -5,6 +5,8 @@ const env = require('./env.js')
 
 function World() {
         const self = this;
+
+
         this.httpGet = function (uri) {
             return _httpRequest({ method: 'GET', uri: uri, headers: {'User-Agent': 'node.js'}})
         }

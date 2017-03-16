@@ -3,15 +3,14 @@ import { defineSupportCode } from 'cucumber';
 import chai from 'chai';
 chai.should();
 import chaiAsPromised from 'chai-as-promised';
-//var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 
 var githubHome = require('../pages/githubHome');
 var joinGithubPage = require('../pages/joinGithub');
 
-defineSupportCode(function({Given, When, Then}) {
+defineSupportCode(function({Given, When, Then, setDefaultTimeout}) {
 
-
+       setDefaultTimeout(60 * 1000);
 
        Given('a github username photobox', function () {
             console.log("Username is photobox");
@@ -21,10 +20,10 @@ defineSupportCode(function({Given, When, Then}) {
             return this.httpGet(path);
        });
 
-       Then('I should get response statusCode {arg1:int}', function (arg1, callback) {
+       Then('I should get response statusCode {arg1:int}', function (status_200) {
            const statusCode = this.statusCode
-           statusCode.should.equal(200);
-           callback();
+           statusCode.should.equal(status_200);
+
        });
 
        Then('the response property {arg1:stringInDoubleQuotes} should be {arg2:stringInDoubleQuotes}', function (key, value, callback) {
